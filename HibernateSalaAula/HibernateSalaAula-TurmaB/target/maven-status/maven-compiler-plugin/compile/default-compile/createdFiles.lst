@@ -1,0 +1,5 @@
+ifc\ibirama\hibernatesalaaula\turmab\entidades\Viatura.class
+ifc\ibirama\hibernatesalaaula\turmab\entidades\Bombeiro.class
+ifc\ibirama\hibernatesalaaula\turmab\HibernateSalaAulaTurmaB.class
+ifc\ibirama\hibernatesalaaula\turmab\util\HibernateUtil.class
+ifc\ibirama\hibernatesalaaula\turmab\util\SessionFactory.class
