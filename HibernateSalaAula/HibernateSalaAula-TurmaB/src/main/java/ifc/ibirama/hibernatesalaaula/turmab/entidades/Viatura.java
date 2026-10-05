@@ -4,19 +4,36 @@
  */
 package ifc.ibirama.hibernatesalaaula.turmab.entidades;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import java.time.LocalDate;
 
 /**
  *
  * @author aluno
  */
+@Entity
+@Table (name="Viatura")
 public class Viatura {
-    
-    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "via_id")
     private Integer id;
+    
+    @Column(name = "via_placa", length = 7, unique = true, nullable = false)
     private String placa;
+    
+    @Column(name = "via_combustivel", length = 45, unique = false, nullable = false)
     private String combustivel;
+    
+    @Column(name = "via_ultimaRevisao", length = 45, unique = false, nullable = false)
     private LocalDate ultimaRevisao;
+    
+    @Column(name = "via_km", length = 45, unique = false, nullable = false)
     private Integer km;
     
     //id
@@ -53,6 +70,40 @@ public class Viatura {
     
     public void setUltimaRevisao(LocalDate UltimaRevisao){
         this.ultimaRevisao = UltimaRevisao;
+    }
+    
+    //km
+    public Integer getKm(){
+        return km;
+    }
+    
+    public void setKm(Integer km){
+        this.km = km;
+    }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Viatura) {
+            Viatura aux = (Viatura) obj;
+
+            /* if ((aux.getId().equals(this.Id)) && (aux.getCpf().equals(this.cpf))) {
+                return true;
+            }
+             */
+            if (aux.getId().equals(this.id) && (aux.getPlaca().equals(this.placa))) {
+                return true;
+            } else {
+                return false;
+            }
+
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
     }
     
 }
