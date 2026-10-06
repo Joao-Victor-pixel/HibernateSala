@@ -41,7 +41,7 @@ public class GerenciarBombeiro {
                 transacao.rollback();
             }
         }
-        
+        //eeeeeeeeeeeeeeeeeeeeeeeeee
         HibernateUtil.shutdown();
     }
 }
