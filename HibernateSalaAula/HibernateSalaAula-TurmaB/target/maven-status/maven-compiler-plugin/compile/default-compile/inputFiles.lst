@@ -1,5 +1,7 @@
-C:\Users\aluno\Documents\NetBeansProjects\HibernateSalaAula\HibernateSalaAula-TurmaB\src\main\java\ifc\ibirama\hibernatesalaaula\turmab\entidades\Bombeiro.java
-C:\Users\aluno\Documents\NetBeansProjects\HibernateSalaAula\HibernateSalaAula-TurmaB\src\main\java\ifc\ibirama\hibernatesalaaula\turmab\entidades\Viatura.java
-C:\Users\aluno\Documents\NetBeansProjects\HibernateSalaAula\HibernateSalaAula-TurmaB\src\main\java\ifc\ibirama\hibernatesalaaula\turmab\HibernateSalaAulaTurmaB.java
-C:\Users\aluno\Documents\NetBeansProjects\HibernateSalaAula\HibernateSalaAula-TurmaB\src\main\java\ifc\ibirama\hibernatesalaaula\turmab\util\HibernateUtil.java
-C:\Users\aluno\Documents\NetBeansProjects\HibernateSalaAula\HibernateSalaAula-TurmaB\src\main\java\ifc\ibirama\hibernatesalaaula\turmab\util\SessionFactory.java
+C:\Users\aluno\Documents\NetBeansProjects\HibernateSala\HibernateSalaAula\HibernateSalaAula-TurmaB\src\main\java\ifc\ibirama\hibernatesalaaula\turmab\entidades\Bombeiro.java
+C:\Users\aluno\Documents\NetBeansProjects\HibernateSala\HibernateSalaAula\HibernateSalaAula-TurmaB\src\main\java\ifc\ibirama\hibernatesalaaula\turmab\entidades\StatusViatura.java
+C:\Users\aluno\Documents\NetBeansProjects\HibernateSala\HibernateSalaAula\HibernateSalaAula-TurmaB\src\main\java\ifc\ibirama\hibernatesalaaula\turmab\entidades\Viatura.java
+C:\Users\aluno\Documents\NetBeansProjects\HibernateSala\HibernateSalaAula\HibernateSalaAula-TurmaB\src\main\java\ifc\ibirama\hibernatesalaaula\turmab\GerenciarBombeiro.java
+C:\Users\aluno\Documents\NetBeansProjects\HibernateSala\HibernateSalaAula\HibernateSalaAula-TurmaB\src\main\java\ifc\ibirama\hibernatesalaaula\turmab\HibernateSalaAulaTurmaB.java
+C:\Users\aluno\Documents\NetBeansProjects\HibernateSala\HibernateSalaAula\HibernateSalaAula-TurmaB\src\main\java\ifc\ibirama\hibernatesalaaula\turmab\util\HibernateUtil.java
+C:\Users\aluno\Documents\NetBeansProjects\HibernateSala\HibernateSalaAula\HibernateSalaAula-TurmaB\src\main\java\ifc\ibirama\hibernatesalaaula\turmab\util\SessionFactory.java
