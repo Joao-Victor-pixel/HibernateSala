@@ -9,6 +9,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 /**
@@ -29,6 +31,21 @@ public class Usuario {
     @Column(name = "usu_senha")
     private String senha;
 
+    @OneToOne
+    @JoinColumn(name = "bom_id", unique = true)
+    private Bombeiro bombeiro;
+
+    public Bombeiro getBombeiro() {
+        return bombeiro;
+    }
+
+    public void setBombeiro(Bombeiro bombeiro) {
+        this.bombeiro = bombeiro;
+    }
+    
+    public Usuario(){
+        
+    }
     public Integer getId() {
         return id;
     }
@@ -53,5 +70,28 @@ public class Usuario {
         this.senha = senha;
     }
     
-    
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Usuario) {
+            Usuario aux = (Usuario) obj;
+
+            /* if ((aux.getId().equals(this.Id)) && (aux.getCpf().equals(this.cpf))) {
+                return true;
+            }
+             */
+            if (aux.getId().equals(this.id) && (aux.getLogin().equals(this.login))) {
+                return true;
+            } else {
+                return false;
+            }
+
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
 }
