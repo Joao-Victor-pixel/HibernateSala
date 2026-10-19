@@ -10,6 +10,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
@@ -28,8 +29,9 @@ public class TelefoneDeContato {
     @Column (name="tec_tipo", length = 45, unique = false, nullable = false)
     private String tipo;
     
-    @OneToOne
-    @JoinColumn(name = "bom_id", unique = true)
+    @ManyToOne
+    @JoinColumn(name="bom_id", unique = true)
+
     private Bombeiro bombeiro;
 
     public Integer getId() {
