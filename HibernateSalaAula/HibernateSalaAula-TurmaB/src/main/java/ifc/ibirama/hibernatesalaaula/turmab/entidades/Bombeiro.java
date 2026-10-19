@@ -12,6 +12,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "Bombeiro")
@@ -36,6 +38,15 @@ public class Bombeiro {
     
     @OneToOne(mappedBy = "bombeiro")
     private Usuario usuario;
+    private Set<TelefoneDeContato> telefone = new HashSet<TelefoneDeContato>();
+
+    public Set<TelefoneDeContato> getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(Set<TelefoneDeContato> telefone) {
+        this.telefone = telefone;
+    }
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
