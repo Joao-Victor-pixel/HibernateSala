@@ -9,6 +9,7 @@ import ifc.ibirama.hibernatesalaaula.turmab.util.HibernateUtil;
 import java.time.LocalDate;
 import java.time.Month;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -25,6 +26,23 @@ public class GerenciarBombeiro {
         bombeiro01.setNome("Marquinhos do Grau Graurudo");
         bombeiro01.setGuerra("Graurudo");
         bombeiro01.setDataNascimento(LocalDate.of(2010, Month.JULY, 15));
+        
+        
+        Transaction transacao = null;
+        
+        try {
+            transacao = sessao.beginTransaction();
+            
+            sessao.persist(bombeiro01);
+            
+            transacao.commit();
+            
+            System.out.println("Bombeiro salvo");
+        } catch (Exception error) {
+            if (transacao!=null) {
+                transacao.rollback();
+            }
+        }
         
         HibernateUtil.shutdown();
     }
