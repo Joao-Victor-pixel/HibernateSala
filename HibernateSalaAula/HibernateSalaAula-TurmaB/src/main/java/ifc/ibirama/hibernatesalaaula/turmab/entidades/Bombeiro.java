@@ -36,6 +36,8 @@ public class Bombeiro {
 
     @Column(name = "bom_nome_guerra", nullable = false, length = 45, unique = true)
     private String guerra;
+    
+   
 
     @OneToOne(mappedBy = "bombeiro")
     private Usuario usuario;
@@ -91,6 +93,7 @@ public class Bombeiro {
         this.guerra = guerra;
     }
 
+    /*
     public Usuario getUsuario() {
         return usuario;
     }
@@ -115,22 +118,25 @@ public class Bombeiro {
         this.patente = patente;
     }
 
+   */ 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
+        if (obj instanceof Usuario) {
+            Usuario aux = (Usuario) obj;
 
-        if (!(obj instanceof Bombeiro)) {
+            /* if ((aux.getId().equals(this.Id)) && (aux.getCpf().equals(this.cpf))) {
+                return true;
+            }
+             */
+            if (aux.getId().equals(this.id) && (aux.getLogin().equals(this.cpf))) {
+                return true;
+            } else {
+                return false;
+            }
+
+        } else {
             return false;
         }
-
-        Bombeiro outro = (Bombeiro) obj;
-
-        return id != null
-                && id.equals(outro.getId())
-                && cpf != null
-                && cpf.equals(outro.getCpf());
     }
 
     @Override
