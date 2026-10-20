@@ -1,6 +1,8 @@
 ifc\ibirama\hibernatesalaaula\turmab\entidades\Viatura.class
 ifc\ibirama\hibernatesalaaula\turmab\entidades\StatusViatura.class
 ifc\ibirama\hibernatesalaaula\turmab\entidades\Usuario.class
+ifc\ibirama\hibernatesalaaula\turmab\entidades\Patente.class
+ifc\ibirama\hibernatesalaaula\turmab\entidades\BombeiroHasPatente.class
 ifc\ibirama\hibernatesalaaula\turmab\entidades\TelefoneDeContato.class
 ifc\ibirama\hibernatesalaaula\turmab\entidades\Bombeiro.class
 ifc\ibirama\hibernatesalaaula\turmab\GerenciarBombeiro.class
