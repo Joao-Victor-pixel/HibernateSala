@@ -38,7 +38,7 @@ public class Bombeiro {
     private String guerra;
     
    
-
+/*
     @OneToOne(mappedBy = "bombeiro")
     private Usuario usuario;
 
@@ -49,7 +49,7 @@ public class Bombeiro {
             joinColumns = @JoinColumn(name = "bom_id"),
             inverseJoinColumns = @JoinColumn(name = "pat_id"))
     private Set<Patente> patente = new HashSet<Patente>();
-
+*/
     public Bombeiro() {
     }
 
