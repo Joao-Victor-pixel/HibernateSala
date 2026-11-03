@@ -38,10 +38,10 @@ public class Bombeiro {
     private String guerra;
     
    
-/*
+
     @OneToOne(mappedBy = "bombeiro")
     private Usuario usuario;
-
+/*
     @OneToMany(mappedBy = "bombeiro")
     private Set<TelefoneDeContato> telefone = new HashSet<TelefoneDeContato>();
     @ManyToMany
@@ -93,7 +93,7 @@ public class Bombeiro {
         this.guerra = guerra;
     }
 
-    /*
+    
     public Usuario getUsuario() {
         return usuario;
     }
@@ -101,7 +101,7 @@ public class Bombeiro {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
-
+    /*
     public Set<TelefoneDeContato> getTelefone() {
         return telefone;
     }
