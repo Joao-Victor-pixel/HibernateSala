@@ -18,7 +18,7 @@ import java.time.LocalDate;
  */
 @Entity
 @Table (name="Viatura")
-public class Viatura {
+public abstract class Viatura {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "via_id")
