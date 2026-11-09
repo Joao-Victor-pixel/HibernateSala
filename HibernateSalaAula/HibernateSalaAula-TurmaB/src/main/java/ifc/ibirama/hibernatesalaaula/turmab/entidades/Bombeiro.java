@@ -1,5 +1,6 @@
 package ifc.ibirama.hibernatesalaaula.turmab.entidades;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -39,7 +40,7 @@ public class Bombeiro {
     
    
 
-    @OneToOne(mappedBy = "bombeiro")
+    @OneToOne(mappedBy = "bombeiro", cascade = CascadeType.ALL)
     private Usuario usuario;
 /*
     @OneToMany(mappedBy = "bombeiro")

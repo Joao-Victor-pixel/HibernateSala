@@ -41,7 +41,7 @@ public class GerenciarBombeiro {
             transacao = sessao.beginTransaction();
             
             sessao.persist(bombeiro01);
-            sessao.persist(usuario01);
+            //sessao.persist(usuario01);
             
             transacao.commit();
             
