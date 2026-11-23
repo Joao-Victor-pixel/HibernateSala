@@ -23,11 +23,17 @@ public class ConsultarBombeiro {
 
         List<Bombeiro> bombeiro = sessao.createQuery(meuHQL, Bombeiro.class).getResultList();
         
+        /*
         for (Iterator<Bombeiro> index = bombeiro.iterator(); index.hasNext();){
             Bombeiro meuBombeiro = index.next();
             System.out.println(meuBombeiro.getCpf());
         }
+        */
         
+        for (int index = 0; index < bombeiro.size(); index++) {
+            Bombeiro meuBombeiro = bombeiro.get(index);
+            System.out.println(meuBombeiro.getCpf());
+        }
         HibernateUtil.shutdown();
     }
 }
